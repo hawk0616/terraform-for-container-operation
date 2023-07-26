@@ -10,7 +10,6 @@ on:
 
 env:
   OIDC_ARN: arn:aws:iam::113713103169:role/GitHubActionsOIDC
-  # Change xxxxxxxxxxxx to your AWS account id
 
 permissions:
   # OICD認証用
