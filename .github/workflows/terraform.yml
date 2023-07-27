@@ -11,6 +11,14 @@ on:
 env:
   OIDC_ARN: arn:aws:iam::113713103169:role/GitHubActionsOIDC
 
+permissions:
+  # OICD認証用
+  id-token: write
+  # Terraformコマンド実行時に、リポジトリの内容を参照するため
+  contents: read
+  # terraform plan, terraform applyの実行結果をPRにコメントする用
+  pull-requests: write
+
 jobs:
   terraform:
     runs-on: ubuntu-latest
