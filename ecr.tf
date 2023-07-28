@@ -1,5 +1,5 @@
 resource "aws_ecr_repository" "ecr_repository" {
-  name                 = local.app
+  name = local.app
   # イメージタグの上書きを禁止
   image_tag_mutability = "IMMUTABLE"
   force_delete         = true
